@@ -10,3 +10,5 @@ Ressources pour la semaine intensive :
  -Cahier des charges : https://docs.google.com/document/d/1I8qyw0QFpBmRU4ysYlNMhgAfnw9h27nYoPxpcwnAcsg/edit?usp=sharing
 
  -Trello : https://trello.com/b/gteSL1to/projet-semaine-intencive
+
+ -Figma : https://www.figma.com/file/JfoHg5o1RajxCfEFRwUDRcgB/yalla
