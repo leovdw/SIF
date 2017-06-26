@@ -5,7 +5,7 @@
 
 var button = document.querySelector('.is1');
 var isnot = document.querySelector('.isnot');
-var AllButtons = document.querySelectorAll('.button');
+var AllButtons = document.querySelectorAll('.is-small');
 
 var temps = 1;
 
