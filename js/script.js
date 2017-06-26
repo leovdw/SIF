@@ -1,88 +1,90 @@
 /**
- * Created by leopo on 23/06/2017.
+ * Created by leo on 23/06/2017.
  */
 /* ----------------------------- TIME RESET --------------------------------*/
 
 var temps = 1;
 
-var myVar = setInterval(myTimer, 800);
+var myVar = setInterval(myTimer, 650);
 
 function myTimer() {
     temps = temps + 1;
 }
 
-/* TO CHANGE  (Selectionner toute les sections) */
-
-var SectionNb = document.querySelectorAll('.section');
+var SectionNb = document.querySelectorAll('.is-scrolable');
 
 
 
 
-/* ----------------------------- ADD SECTION --------------------------------*/
-/* TO CHANGE (button pour add une page) */
+/* ----------------------------- ADD is-scrolable --------------------------------*/
+/*
 
 var add= document.querySelector('.add');
 
-/* TO CHANGE (section conteneur)*/
 
-var section_wraper= document.querySelector('.section_wraper');
+
+var scroll_container= document.querySelector('.scroll_container');
 
 add.addEventListener('click', function () {
     createsection();
-
 });
 
 function createsection() {
-    var newsection= document.createElement("section");
-    var SectionNb = document.querySelectorAll('.section');
+    var newsection= document.createElement("is-scrolable");
+    var SectionNb = document.querySelectorAll('.is-scrolable');
     newsection.innerHTML= SectionNb.length + 1;
-    newsection.classList.add('newsection');
-    newsection.classList.add('section');
-    section_wraper.appendChild(newsection);
+    newsection.cldotssList.add('newsection');
+    newsection.cldotssList.add('is-scrolable');
+    scroll_container.appendChild(newsection);
 }
 
-
+*/
 /* -------------------------------------------------------------*/
+/* ----------------------------Nav Barre Scroll---------------------------------*/
+
+var dots = document.querySelectorAll('.dot');
+var isactive = document.querySelector('.dot.is-visible');
+for(let i = 0 ; i < dots.length; i++ ){
+    dots[i].addEventListener('click', function  () {
+        var isactive = document.querySelector('.dot.is-visible');
+        isactive.classList.remove('is-visible');
+        dots[i].classList.add('is-visible');
+        scrollTO(i);
+        temps = 0;
+    })
+}
+
 var count = 0;
 
 document.addEventListener('mousewheel', function (event) {
     if (temps >= 1){
 
         var scroll = Math.round(event.deltaY);
-
+        var isactive = document.querySelector('.dot.is-visible');
         if (scroll > 1){
-            scrollTO(count + 1)
+            scrollTO(count + 1);
+            isactive.classList.remove('is-visible');
+            dots[count].classList.add('is-visible');
         }
         if(scroll < -1) {
-            scrollTO(count - 1)
+            scrollTO(count - 1);
+            isactive.classList.remove('is-visible');
+            dots[count].classList.add('is-visible');
         }
-        temps = 0;
+        temps = -0.5;
     }});
 
 var scrollTO = function (to) {
     count = to;
-    var SectionNb = document.querySelectorAll('.section');
+    var SectionNb = document.querySelectorAll('.is-scrolable');
     if (count === SectionNb.length){count = SectionNb.length -1}
     if (count === -1){count = 0}
 
     for (var i = 0; i<SectionNb.length ; i++){
         if (count === i){
             for (var j = 0; j<SectionNb.length ;j++) {
-                SectionNb[j].style = 'transform: translateY(-' + i * 100 + '%);';
+                SectionNb[j].style = 'transform: translateX(-' + i * 100 + '%);';
             }
         }
     }
 };
-/* ----------------------------Nav Barre Scroll---------------------------------*/
-/* TO CHANGE (side nav)*/
-var as = document.querySelectorAll('.sidenav a');
-
-for(let i = 0 ; i < as.length; i++ ){
-    as[i].addEventListener('click', function  () {
-        var isactive = document.querySelector('.active');
-        isactive.classList.remove('active');
-        as[i].classList.add('active');
-        scrollTO(i);
-        temps = 0;
-    })
-}

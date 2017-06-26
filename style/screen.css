@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body{
+
+}
+/*========Section scrolable========*/
+.scroll_container{
+    display: -webkit-box;
+    white-space: nowrap;
+}
+
+.is-scrolable{
+    width : 100%;
+    transition: 0.9s  ease;
+}
+
+/*========Dots========*/
+
+.dots_container{
+    position: absolute;
+    bottom: 3%;
+    width: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dot{
+    float: left;
+    margin-left: 15px;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+.dots_container .dot::before,
+.dots_container .dot::after {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top: 50%;
+    transition: all .3s ease;
+}
+.dots_container .dot::before,
+.dots_container .dot::before {
+    border-color: white;
+}
+.dots_container .dot::after {
+    width:  23px;
+    height: 23px;
+    border: 2px solid white;
+    right: -7px;
+    transform: translateY(-50%) scale(0);
+}
+.dots_container .dot.is-visible::after,
+.dots_container .dot:hover::before {
+    transform: translateY(-50%) scale(1);
+}
+
+.button.is-small{
+    margin-left: 20px;
+    transform: translateY(-36%);
+    border-radius: 290486px;
+}
