@@ -3,6 +3,10 @@
  */
 /* ----------------------------- TIME RESET --------------------------------*/
 
+var button = document.querySelector('.is1');
+var isnot = document.querySelector('.isnot');
+var AllButtons = document.querySelectorAll('.button');
+
 var temps = 1;
 
 var myVar = setInterval(myTimer, 650);
@@ -12,7 +16,7 @@ function myTimer() {
 }
 
 var SectionNb = document.querySelectorAll('.is-scrolable');
-
+var scrollContainer = document.querySelector('.scroll_container');
 
 
 
@@ -87,4 +91,25 @@ var scrollTO = function (to) {
             }
         }
     }
+
+    if (count === 5){
+        console.log('ok');
+        button.classList.remove('is1');
+        button.classList.add('isnot');
+        isnot.classList.add('is1');
+        isnot.classList.remove('isnot')
+    }else{
+        button.classList.remove('isnot');
+        button.classList.add('is1');
+        isnot.classList.add('isnot');
+        isnot.classList.remove('is1')
+    }
 };
+
+for (var i = 0 ; i<AllButtons.length ; i++){
+    AllButtons[i].addEventListener('click', function(){
+        scrollContainer.style = 'opacity: 0;' +
+                                'transform: translateY(-100%);'
+
+    })
+}

@@ -7,6 +7,7 @@ body{
 .scroll_container{
     display: -webkit-box;
     white-space: nowrap;
+    transition: 0.8s ease;
 }
 
 .is-scrolable{
@@ -62,4 +63,16 @@ body{
     margin-left: 20px;
     transform: translateY(-36%);
     border-radius: 290486px;
+}
+
+.is1{
+    position: absolute;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.isnot{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s ease;
 }
