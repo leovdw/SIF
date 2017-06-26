@@ -109,7 +109,6 @@ var scrollTO = function (to) {
 for (var i = 0 ; i<AllButtons.length ; i++){
     AllButtons[i].addEventListener('click', function(){
         scrollContainer.style = 'opacity: 0;' +
-                                'transform: translateY(-100%);'
-
+                                'transform: translateY(-100%);';
     })
 }
