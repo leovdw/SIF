@@ -181,6 +181,7 @@ p:nth-child(3){
 }
 
 /*========Home========*/
+
 .home {
     background: url("../img-content/intro1.jpg") no-repeat;
     background-size: cover;
@@ -192,6 +193,7 @@ p:nth-child(3){
     width: 100%;
 }
 
+
 strong {
     color: white;
     font-weight: 600;
@@ -200,6 +202,7 @@ strong {
 
 .home .hero-body p {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.51);
+
     margin-right: 10%;
     line-height: 130%;
 }
@@ -251,3 +254,38 @@ strong {
     padding: 0;
     top: 50%;
 }
+
+  
+.calendar{
+    position: absolute;
+    min-width: 55px;
+    top:5%;
+    left: 4%;
+    transition: 0.8s ease;
+    cursor: pointer;
+}
+
+.calendar img{
+    cursor: pointer;
+}
+
+.calendrier{
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    transform: translateX(-100%);
+}
+.box {
+    background-color: white;
+    border-radius: 0;
+}
+.open{
+    transform: translateX(0%);
+}
+
+.delete.is-medium {
+    margin-top: 3%;
+    height: 24px;
+    width: 24px;
+}
+
