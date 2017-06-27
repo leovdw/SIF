@@ -181,6 +181,7 @@ strong{
 }
 
 /*========Home========*/
+
 .home {
     background: url("../img-content/intro1.jpg") no-repeat;
     background-size: cover;
@@ -192,3 +193,15 @@ strong{
     width: 100%;
 }
 
+.calendar{
+    position: absolute;
+    min-width: 55px;
+    top:5%;
+    left: 4%;
+    transition: 0.8s ease;
+    cursor: pointer;
+}
+
+.calendar img{
+    cursor: pointer;
+}

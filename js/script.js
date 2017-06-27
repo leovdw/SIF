@@ -107,7 +107,7 @@ var scrollTO = function (to) {
     }
 };
 
-function noneIntro() {
+function noIntro() {
     scrollContainer.style.display = "none";
 }
 
@@ -116,6 +116,6 @@ for (var i = 0 ; i<AllButtons.length ; i++){
         scrollContainer.style = 'opacity: 0;' +
                                 'transform: translateY(-100%);';
         home.style = 'opacity: 1;';
-
+        setTimeout(noIntro, 500)
     })
 }
