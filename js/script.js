@@ -117,6 +117,7 @@ for (var i = 0 ; i<AllButtons.length ; i++){
                                 'transform: translateY(-100%);';
         home.style = 'opacity: 1;';
         setTimeout(noIntro, 500)
+
     })
 }
 
