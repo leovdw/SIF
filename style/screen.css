@@ -205,3 +205,17 @@ strong{
 .calendar img{
     cursor: pointer;
 }
+
+.calendrier{
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    transform: translateX(-100%);
+}
+.box {
+    background-color: white;
+    border-radius: 0;
+}
+.open{
+    transform: translateX(0%);
+}
