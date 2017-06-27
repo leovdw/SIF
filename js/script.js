@@ -17,6 +17,7 @@ function myTimer() {
 
 var SectionNb = document.querySelectorAll('.is-scrolable');
 var scrollContainer = document.querySelector('.scroll_container');
+var home = document.querySelector('.home');
 
 
 
@@ -106,9 +107,15 @@ var scrollTO = function (to) {
     }
 };
 
+function noneIntro() {
+    scrollContainer.style.display = "none";
+}
+
 for (var i = 0 ; i<AllButtons.length ; i++){
     AllButtons[i].addEventListener('click', function(){
         scrollContainer.style = 'opacity: 0;' +
                                 'transform: translateY(-100%);';
+        home.style = 'opacity: 1;';
+
     })
 }
