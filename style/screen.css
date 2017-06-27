@@ -165,3 +165,17 @@ strong{
     font-weight: 600;
     font-size: 35px;
 }
+
+/*========Home========*/
+.home {
+    background: url("../img-content/intro1.jpg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    opacity:0;
+    top:0;
+    left:0;
+    z-index: -1;
+    width: 100%;
+}
+
+
