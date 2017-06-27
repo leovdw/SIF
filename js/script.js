@@ -119,3 +119,19 @@ for (var i = 0 ; i<AllButtons.length ; i++){
         setTimeout(noIntro, 500)
     })
 }
+
+
+// ========= JS Calendrier ======= //
+
+var calendar = document.querySelector('.calendar');
+var calendrier = document.querySelector('.calendrier');
+var close= document.querySelector('.delete');
+
+close.addEventListener('click', function () {
+    calendrier.classList.remove('open');
+});
+
+calendar.addEventListener('click', function () {
+   calendrier.classList.add('open');
+    console.log('ok')
+});
