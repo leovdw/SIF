@@ -8,7 +8,6 @@ body{
     display: -webkit-box;
     white-space: nowrap;
     transition: 0.8s ease;
-
 }
 
 .is-scrolable{
@@ -174,7 +173,7 @@ p:nth-child(3){
     cursor: hand;
 }
 
-strong{
+.scroll_container strong{
     color: white;
     font-weight: 600;
     font-size: 35px;
@@ -193,6 +192,16 @@ strong{
     width: 100%;
 }
 
+
+strong {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.home .hero-body p {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.51);
+  
 .calendar{
     position: absolute;
     min-width: 55px;
