@@ -219,3 +219,9 @@ strong{
 .open{
     transform: translateX(0%);
 }
+
+.delete.is-medium {
+    margin-top: 3%;
+    height: 24px;
+    width: 24px;
+}
