@@ -134,5 +134,17 @@ close.addEventListener('click', function () {
 
 calendar.addEventListener('click', function () {
    calendrier.classList.add('open');
-    console.log('ok')
+});
+
+// ========= Modal Home ======= //
+
+var ModalLunch = document.querySelector('.modaluncher');
+var ModalClose = document.querySelector('.modal-close');
+var modal = document.querySelector('.modal');
+
+ModalLunch.addEventListener('click', function () {
+   modal.classList.add('is-active')
+});
+ModalClose.addEventListener('click', function () {
+   modal.classList.remove('is-active')
 });
