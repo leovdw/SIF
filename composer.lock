@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "10d72ff1c67e85f18f54ffd6948d238c",
+=======
+    "content-hash": "09531847fa89d32b8b408f5dc904d5a0",
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1050,6 +1054,7 @@
             "time": "2016-10-17T18:31:11+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "firebase/php-jwt",
             "version": "v4.0.0",
             "source": {
@@ -1093,6 +1098,8 @@
             "time": "2016-07-18T04:51:16+00:00"
         },
         {
+=======
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
             "name": "friendsofsymfony/user-bundle",
             "version": "v2.0.1",
             "source": {
@@ -1170,6 +1177,7 @@
             "time": "2017-05-31T11:50:14+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "google/apiclient",
             "version": "v2.1.3",
             "source": {
@@ -1495,6 +1503,8 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
+=======
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -1738,6 +1748,7 @@
             "time": "2016-12-05T10:18:33+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "mediafigaro/google-analytics-api-symfony",
             "version": "1.0",
             "source": {
@@ -1787,6 +1798,8 @@
             "time": "2016-09-30T17:00:15+00:00"
         },
         {
+=======
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
             "name": "monolog/monolog",
             "version": "1.22.1",
             "source": {
@@ -1982,6 +1995,7 @@
             "time": "2017-03-13T16:27:32+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "phpseclib/phpseclib",
             "version": "2.0.6",
             "source": {
@@ -2074,6 +2088,8 @@
             "time": "2017-06-05T06:31:10+00:00"
         },
         {
+=======
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
             "name": "psr/cache",
             "version": "1.0.1",
             "source": {
@@ -2169,6 +2185,7 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -2219,6 +2236,8 @@
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
+=======
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
             "name": "psr/link",
             "version": "1.0.0",
             "source": {

@@ -20,7 +20,10 @@ class AppKernel extends Kernel
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+<<<<<<< HEAD
             new MediaFigaro\GoogleAnalyticsApi\GoogleAnalyticsApi(),
+=======
+>>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
 
 
         ];
