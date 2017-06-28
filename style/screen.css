@@ -204,7 +204,11 @@ p:nth-child(3){
 
 /*========Home========*/
 
-
+strong {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
 .home {
     background: url("../img-content/intro1.jpg") no-repeat;
     background-size: cover;
@@ -216,23 +220,15 @@ p:nth-child(3){
     width: 100%;
 }
 
-strong {
-    color: white;
-    font-weight: 600;
-    font-size: 30px;
-}
-
 .home .hero-body p {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.51);
     line-height: 130%;
 }
-
 .home span {
     font-size: 42px;
     font-style: italic;
     font-weight: 600;
 }
-
 .home nav {
     position: fixed;
     top: 50%;
@@ -240,7 +236,6 @@ strong {
     right: 5%;
     text-align: center;
 }
-
 .home nav ul li a {
     color: #FFFFFF;
     opacity: 0.7;
@@ -282,11 +277,9 @@ strong {
     transition: 0.8s ease;
     cursor: pointer;
 }
-
 .calendar img{
     cursor: pointer;
 }
-
 .calendrier{
     position: absolute;
     width: 35%;
@@ -294,6 +287,19 @@ strong {
     transform: translateX(-100%);
     transition: 0.5s ease;
     z-index: 999;
+}
+.highlight{
+    max-height: calc( var(--hauteurA) - var(--hauteurB) -  var(--hauteurC));
+    overflow: auto;
+    max-width: 100%;
+}
+.container_calendar{
+    --hauteurC : calc(3.5rem + 1.5rem);
+    --hauteurB : calc((0.375em - 1px) * 2 + 2.25em );
+    --hauteurA : 100vh;
+    height: var(--hauteurA);
+    overflow: auto;
+    padding: 9px;
 }
 .box {
     background-color: white;
@@ -308,7 +314,6 @@ strong {
     height: 24px;
     width: 24px;
 }
-
 .content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
     margin-bottom: 0;
 }
@@ -324,6 +329,7 @@ strong {
 .box:not(:last-child) {
     margin-bottom: 0    ;
 }
+
 .my-center{
     left:50%;
     transform: translateX(-50%);
@@ -340,7 +346,6 @@ strong {
     right: 0;
 }
 
-
 /*========== MODAL ==========*/
 
 .modal-content, .modal-card {
@@ -349,7 +354,6 @@ strong {
     position: relative;
     width: 80%;
 }
-
 .column a{
     color: white;
     text-transform: uppercase;
@@ -359,13 +363,7 @@ strong {
     color: black;
 }
 
-
-
-
-
-
 /*========== Page Actu ==========*/
-
 
 .actu {
     background: url("../img-content/intro1.jpg") no-repeat;
@@ -375,37 +373,30 @@ strong {
     left:0;
     width: 100%;
 }
-
 .actu .hero-body .section{
     padding: 0;
     width: 90%;
     margin: 0 auto;
     background: transparent;
 }
-
 .filariane{
     padding-bottom: 5%;
     color: white;
 }
-
 .filariane a{
     color: white;
 }
-
 .filariane a:hover{
     text-decoration: underline;
 }
-
 .arian_active{
     text-decoration: underline;
 }
-
 .actu_container{
     display: -webkit-box;
     white-space: nowrap;
     transition: 0.8s ease;
 }
-
 .actu .card{
     width: 20%;
     float: left;
@@ -414,25 +405,20 @@ strong {
     background: transparent;
     transition: 0.8s ease;
 }
-
 .actu .card-content {
     padding: 1rem;
     height: 180px;
     background-color: white;
 }
-
 .card-content .content{
     height: 129px;
 }
-
 .content:not(:last-child) {
     margin-bottom: 0;
 }
 .read_more_actu{
     text-decoration: underline;
 }
-
-
 .hero-body .section .card p{
     color: black;
     font-weight: 400;
@@ -440,13 +426,12 @@ strong {
      font-size: 22px;
     white-space: normal;
 }
-
  .card small a{
      color: black;
      text-underline: black;
  }
-/*========== Break Point ==========*/
 
+/*========== Break Point ==========*/
 
 @media screen and (max-width: 980px){
     .home .hero-body p {
