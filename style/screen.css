@@ -48,7 +48,6 @@ body{
     text-align: center;
 }
 
-
 .hero.is-fullheight .hero-body {
     height: 100vh;
     -webkit-box-align: center;
@@ -57,6 +56,7 @@ body{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;}
+
 /*========Dots========*/
 
 .dots_container{
@@ -145,13 +145,29 @@ body{
     margin-top: 10%;
 }
 .button_media:hover{
-    left: 50%;
+     left: 50%;
+     background: white;
+     transform: translateX(-50%);
+     border-radius:290486px;
+     color: black;
+}
 
-    background: white;
-    transform: translateX(-50%);
+.button_media_home{
+    max-width: 124px;
+    background-color: #FA0023;
+    border-radius:290486px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+.button_media_home:hover{
+    max-width: 124px;
+    background-color: white;
     border-radius:290486px;
     color: black;
+    cursor: pointer;
 }
+
 .img_card{
     position: relative;
     height: 200px;
@@ -176,12 +192,10 @@ body{
     background-size: 100% ;
 }
 
-
 p:nth-child(3){
     padding-left: 52%;
     cursor: hand;
 }
-
 .scroll_container strong{
     color: white;
     font-weight: 600;
@@ -189,6 +203,8 @@ p:nth-child(3){
 }
 
 /*========Home========*/
+
+
 .home {
     background: url("../img-content/intro1.jpg") no-repeat;
     background-size: cover;
@@ -226,9 +242,14 @@ strong {
 }
 
 .home nav ul li a {
-    color: rgba(255, 255, 255, 0.65);
+    color: #FFFFFF;
+    opacity: 0.7;
     text-transform: uppercase;
     font-size: 24px;
+}
+
+.nav_active{
+    color: yellow;
 }
 
 .bar {
@@ -312,8 +333,118 @@ strong {
     font-size: 13px;
 }
 
+.reserved{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 
+/*========== MODAL ==========*/
+
+.modal-content, .modal-card {
+    margin: 0 20px;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.column a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.column div:hover a{
+    color: black;
+}
+
+
+
+
+
+
+/*========== Page Actu ==========*/
+
+
+.actu {
+    background: url("../img-content/intro1.jpg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+.actu .hero-body .section{
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.filariane{
+    padding-bottom: 5%;
+    color: white;
+}
+
+.filariane a{
+    color: white;
+}
+
+.filariane a:hover{
+    text-decoration: underline;
+}
+
+.arian_active{
+    text-decoration: underline;
+}
+
+.actu_container{
+    display: -webkit-box;
+    white-space: nowrap;
+    transition: 0.8s ease;
+}
+
+.actu .card{
+    width: 20%;
+    float: left;
+    padding: 1.5rem;
+    box-shadow: none;
+    background: transparent;
+    transition: 0.8s ease;
+}
+
+.actu .card-content {
+    padding: 1rem;
+    height: 180px;
+    background-color: white;
+}
+
+.card-content .content{
+    height: 129px;
+}
+
+.content:not(:last-child) {
+    margin-bottom: 0;
+}
+.read_more_actu{
+    text-decoration: underline;
+}
+
+
+.hero-body .section .card p{
+    color: black;
+    font-weight: 400;
+     width: 100%;
+     font-size: 22px;
+    white-space: normal;
+}
+
+ .card small a{
+     color: black;
+     text-underline: black;
+ }
 /*========== Break Point ==========*/
 
 
@@ -347,7 +478,8 @@ strong {
         height: 100vh;
         transition: 0.5s ease;
     }
-}@media screen and (max-width: 627px){
+}
+@media screen and (max-width: 627px){
     .home .hero-body p {
         font-size: 23px;
     }

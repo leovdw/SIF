@@ -64,28 +64,26 @@
     <div class="hero-body">
         <div class="columns">
             <div class="column">
-                    <div class="img_card" id="col_1">
-
-                    </div>
-                <div class="button is-medium button_media">SHARE</div>
+                <div class="img_card" id="col_1">
+                </div>
+                <div class="button is-medium button_media"><a href="">SHARE</a></div>
             </div>
             <div class="column">
-                    <div class="img_card" id="col_2">
+                <div class="img_card" id="col_2">
 
-                    </div>
-                <div class="button is-medium button_media">DONATE</div>
+                </div>
+                <div class="button is-medium button_media"><a href="">DONATE</a></div>
             </div>
             <div class="column">
-                    <div class="img_card" id="col_3">
+                <div class="img_card" id="col_3">
 
-                    </div>
-                <div class="button is-medium button_media">JOIN</div>
+                </div>
+                <div class="button is-medium button_media"><a href="">JOIN</a></div>
             </div>
 
         </div>
     </div>
 </section>
-
     <div class="dots_container">
         <div class="dot is-visible"></div>
         <div class="dot"></div>
@@ -102,33 +100,102 @@
 <section class="hero is-fullheight home">
 
     <div class="logo">
-        <img src="img-content/logo.svg" alt="logo">
+        <img src="img-content/logo.svg" alt="logo" id="logo">
         <div class="btns is-hidden-mobile">
-            <a class="" href=""><button>Share</button></a>
-            <a href=""><button>Donate</button></a>
-            <a href=""><button>Join</button></a>
+            <div class=" button_media_home my-center modaluncher">Support us</div>
         </div>
     </div>
     <nav class="is-6">
         <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="#logo" class="nav_active">Home</a></li>
             <div class="bar"></div>
-            <li><a href="">Projects</a></li>
+            <li><a href="#">Projects</a></li>
             <div class="bar"></div>
-            <li><a href="">About</a></li>
+            <li><a href="#">About</a></li>
             <div class="bar"></div>
-            <li><a href="">Contact</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
     <div class="logo"><img src="img-content/logo.svg" alt="logo"></div>
     <div class="calendar"><img src="img-content/calendar.svg" alt="Calendrier"></div>
+
+
     <!--Calendrier -->
+
     <div class="calendrier is-parent">
         <article class="tile is-child box" style="height: 100vh; overflow: auto;padding: 9px;">
             <h2 class="title has-text-centered">Latests events<a class="delete is-medium is-pulled-right"></a></h2>
-            <figure class="highlight" style="max-height: 80vh; overflow: auto;max-width: 100%;">
+            <figure class="highlight" style="max-height: 86vh; overflow: auto; max-width: 100%;">
 
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="img-content/actu1.png" alt="actualité">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        Fest-noz solidaire le 29 octobre à Poullaouen
+                                    </p>
+                                    <small>11:09 PM - 1 Jan 2016</small>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="img-content/actu2.png" alt="actualité">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+
+                                        Pétition « Ban Ki-moon : STOPPONS LA GUERRE EN SYRIE »
+                                        Nous relayons l’appel citoyen...
+                                    </p>
+                                    <small>11:09 PM - 1 Jan 2016</small>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="img-content/actu3.png" alt="actualité">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        Yalla ! Pour les Enfants au marché des céramistes de Quimper
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="img-content/actu4.png" alt="actualité">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        Les prochains évènements de Souria Houria                                    </p>
+                                    <small>11:09 PM - 1 Jan 2016</small>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                     <div class="box">
                         <article class="media">
                             <div class="media-left">
@@ -199,11 +266,37 @@
                     </div>
 
             </figure>
-            <a href="" class="button my-center">Read more</a>
+            <a href="actualitées.html" class="button my-center">Read more</a>
         </article>
     </div>
 
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="columns">
+                <div class="column">
+                    <div class="img_card" id="col_1">
+                    </div>
+                    <div class="button is-medium button_media"><a href="">SHARE</a></div>
+                </div>
+                <div class="column">
+                    <div class="img_card" id="col_2">
 
+                    </div>
+                    <div class="button is-medium button_media"><a href="">DONATE</a></div>
+                </div>
+                <div class="column">
+                    <div class="img_card" id="col_3">
+
+                    </div>
+                    <div class="button is-medium button_media"><a href="">JOIN</a></div>
+                </div>
+
+            </div>
+        </div>
+        <button class="modal-close"></button>
+    </div>
 
     <div class="hero-body">
 
@@ -212,7 +305,7 @@
             Based in <strong>Lebanon</strong>, <strong><em>Yalla!</em></strong> Has the primary mission of putting out-of-school children out of conflict on <em>their way to school.</em></p>
     </div>
 
-    <p>© 2017 YALLA! - All rights reserved</p>
+    <p class="reserved">© 2017 YALLA! - All rights reserved</p>
 
 </section>
 
