@@ -60,7 +60,7 @@ for(let i = 0 ; i < dots.length; i++ ){
 }
 
 var count = 0;
-
+var checkIntro = 0;
 document.addEventListener('mousewheel', function (event) {
     if (temps >= 1){
 
@@ -116,10 +116,28 @@ for (var i = 0 ; i<AllButtons.length ; i++){
         scrollContainer.style = 'opacity: 0;' +
                                 'transform: translateY(-100%);';
         home.style = 'opacity: 1;';
-        setTimeout(noIntro, 500)
-
+        setTimeout(noIntro, 500);
+        checkIntro++;
     })
 }
+
+var navHome = document.querySelector(".nav-home");
+var navProject = document.querySelector(".nav-project");
+var scrollHome = document.querySelector(".scroll-home")
+
+scrollHome.addEventListener('mousewheel', function (event) {
+    var scroll = Math.round(event.deltaY);
+    if (checkIntro > 0) {
+        if (scroll > 1) {
+            navHome.style = "opacity:0;" + "transform:translateY(-100%);" + "transition:0.8s ease;";
+            navProject.style = "opacity:1;" + "transform:translateY(0%);" + "transition:0.8s ease;";
+        }
+        if (scroll < -1) {
+            navHome.style = "opacity:1;" + "transform:translateY(0%);" + "transition:0.8s ease;";
+            navProject.style = "opacity:0;" + "transform:translateY(100%);" + "transition:0.8s ease;";
+        }
+    }
+});
 
 
 // ========= JS Calendrier ======= //
@@ -148,3 +166,60 @@ ModalLunch.addEventListener('click', function () {
 ModalClose.addEventListener('click', function () {
    modal.classList.remove('is-active')
 });
+
+
+function detectswipe(el,func) {
+    swipe_det = new Object();
+    swipe_det.sX = 0;
+    swipe_det.sY = 0;
+    swipe_det.eX = 0;
+    swipe_det.eY = 0;
+    var min_x = 20;  //min x swipe for horizontal swipe
+    var max_x = 40;  //max x difference for vertical swipe
+    var min_y = 40;  //min y swipe for vertical swipe
+    var max_y = 50;  //max y difference for horizontal swipe
+    var direc = "";
+    ele = document.querySelector(el);
+    ele.addEventListener('touchstart',function(e){
+        var t = e.touches[0];
+        swipe_det.sX = t.screenX;
+        swipe_det.sY = t.screenY;
+    },false);
+    ele.addEventListener('touchmove',function(e){
+        e.preventDefault();
+        var t = e.touches[0];
+        swipe_det.eX = t.screenX;
+        swipe_det.eY = t.screenY;
+    },false);
+    ele.addEventListener('touchend',function(e){
+        //horizontal detection
+        if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y)))) {
+            if(swipe_det.eX > swipe_det.sX) direc = "r";
+            else direc = "l";
+        }
+        //vertical detection
+        if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
+            if(swipe_det.eY > swipe_det.sY) direc = "d";
+            else direc = "u";
+        }
+
+        if (direc != "") {
+            if(typeof func == 'function') func(el,direc);
+        }
+        direc = "";
+    },false);
+}
+
+function myfunction(el,d) {
+    if (d === "u"){
+        navHome.style = "opacity:0;" + "transform:translateY(-100%);" + "transition:0.8s ease;";
+        console.log("down");
+    } else {
+        console.log("not down");
+    }
+    // alert("you swiped on element with id '"+el+"' to "+d+" direction");
+}
+
+
+
+detectswipe('.nav-home',myfunction);
