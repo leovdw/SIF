@@ -132,7 +132,17 @@ var nav_active = document.querySelector('.scroll-home .navigation_isactive');
 var countHome = 0;
 
 
+var alllis = document.querySelectorAll('.is-6 ul li a')
+var nav_isacctive = document.querySelector('.nav-active')
 
+for(let f=0; f<alllis ; f++){
+    alllis[f].addEventListener('click', function () {
+        var nav_isacctive = document.querySelector('.nav-active')
+        scrollToHome(f)
+        nav_isacctive.classList.remove('nav-active')
+        alllis[f].classList.add('nav-active')
+    })
+}
 
 scrollHome.addEventListener('mousewheel', function (event) {
     if (checkIntro > 0) {
