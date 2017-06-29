@@ -390,6 +390,88 @@ p:nth-child(3){
     margin: 2% auto;
 }
 
+/*======== About ========*/
+
+.nav-about .hero {
+    background-color: transparent;
+    bottom: 3%;
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 1rem;
+}
+
+.nav-about .hero .hero-body {
+
+    height: 75vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 0;
+}
+.nav-about .container {
+    height: 90%;
+    padding-top: 0;
+    padding-left: 3%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.titleabout{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.titleabout:nth-child(3){
+    padding-top: 20px;
+}
+
+.hero-foot{
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    margin: 0 auto;
+}
+.hero-foot ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hero-foot ul li:hover{
+    opacity: 1;
+    transition: 0.5s ease;
+}
+.hero-foot ul li{
+    color: white;
+    text-align: center;
+    float: left;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.hero-foot ul li.is-beeing-seen{
+    opacity: 1;
+    color: white;
+}
+
+.nav-about .hero-body .container p{
+    width: 100%;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 769px){
+
+    .hero.is-medium .hero-body {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
 /*======== Calendar ========*/
 .calendar{
     position: absolute;
@@ -559,7 +641,7 @@ p:nth-child(3){
      font-size: 22px;
     white-space: normal;
 }
- .card small a{
+.card small a{
      color: black;
      text-underline: black;
  }
@@ -642,7 +724,7 @@ p:nth-child(3){
 }
 
 p:nth-child(3) {
-    padding-left: 0%;
+    padding-left: 0;
     cursor: hand;
 }
 /*========== Break Point ==========*/

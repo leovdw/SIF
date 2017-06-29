@@ -252,7 +252,6 @@ function myfunction(el,d) {
     } else {
         return 0;
     }
-    // alert("you swiped on element with id '"+el+"' to "+d+" direction");
 }
 
 
