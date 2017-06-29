@@ -9,7 +9,7 @@ var AllButtons = document.querySelectorAll('.is-small');
 
 var temps = 1;
 
-var myVar = setInterval(myTimer, 650);
+var myVar = setInterval(myTimer, 850);
 
 function myTimer() {
     temps = temps + 1;
@@ -121,54 +121,59 @@ for (var i = 0 ; i<AllButtons.length ; i++){
     })
 }
 
+// Section after intro
+var scrollHome = document.querySelector(".scroll-home");
+
 var navHome = document.querySelector(".nav-home");
 var navProject = document.querySelector(".nav-project");
-var truc = document.querySelector(".truc");
-var scrollHome = document.querySelector(".scroll-home");
-// var navigation = document.querySelector(".scroll-home");
+// Section of navigation in home
+var navigation = document.querySelectorAll(".navigation");
+var nav_active = document.querySelector('.scroll-home .navigation_isactive');
+var countHome = 0;
+
+
+
 
 scrollHome.addEventListener('mousewheel', function (event) {
-    var scroll = Math.round(event.deltaY);
     if (checkIntro > 0) {
-        if (scroll > 1) {
-            navHome.style = "opacity:0;" + "transform:translateY(-100%);" + "transition:0.8s ease;";
-            navProject.style = "opacity:1;" + "transform:translateY(0%);" + "transition:0.8s ease;";
-        }
-        if (scroll < -1) {
-            navHome.style = "opacity:1;" + "transform:translateY(0%);" + "transition:0.8s ease;";
-            navProject.style = "opacity:0;" + "transform:translateY(100%);" + "transition:0.8s ease;";
+        if (temps >= 1) {
+            var scroll = Math.round(event.deltaY);
+            console.log(scroll);
+
+            if (scroll > 1) {
+                scrollToHome(countHome + 1);
+                scroll=0;
+            }
+            if (scroll < -1) {
+                scrollToHome(countHome - 1);
+                scroll=0;
+            }
+            scroll=0;
+            temps = 0;
         }
     }
 });
 
+function scrollToHome(to) {
+    countHome = to;
+    if (countHome === navigation.length){countHome = navigation.length -1}
+    if (countHome === -1){countHome = 0}
+    var nav_active = document.querySelector('.navigation_isactive');
 
-// scrollHome.addEventListener('mousewheel', function (event) {
-//     var scroll = Math.round(event.deltaY);
-//     if (checkIntro > 0) {
-//         if (scroll > 1) {
-//             scrollToHome(count + 1);
-//         }
-//         if (scroll < -1) {
-//             scrollToHome(count - 1);
-//         }
-//     }
-// });
-//
-// function scrollToHome(to) {
-//     console.log("ok");
-//     count = to;
-//     var navigation = document.querySelectorAll('.navigation');
-//     if (count === navigation.length){count = navigation.length -1}
-//     if (count === -1){count = 0}
-//
-//     for (var i = 0; i < navigation.length; i++) {
-//         if (count === i){
-//             for (var j = 0; j < navigation.length; j++) {
-//                 navigation[j].style = 'opacity:1;' + 'transform: translateY(-' + i * 100 + '%);' ;
-//             }
-//         }
-//     }
-// }
+    for (var i = 0; i < navigation.length; i++) {
+        if (countHome === i){
+
+            for (let j = 0; j < navigation.length; j++) {
+                navigation[j].style =  ' --translate0 : 0%;  --translate1 : 100%;  --translate2 : 200%;  --translate3 : 300%;'+
+                                        '--result :calc(var(--translate'+j+') - '+i * 100+'%); ' +
+                                        'transform: translateY(var(--result));';
+            }
+
+            nav_active.classList.remove("navigation_isactive");
+            navigation[i].classList.add("navigation_isactive");
+        }
+    }
+}
 
 // ========= JS Calendrier ======= //
 
