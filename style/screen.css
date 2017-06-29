@@ -484,6 +484,13 @@ p:nth-child(3){
     margin: 0;
 }
 
+
+.container_two{
+    width: 80%;
+}
+.container_three{
+    width: 80%;
+}
 #equ1{
     background: url("../img-content/equipe1.jpg");
     background-size: cover;
@@ -500,7 +507,13 @@ p:nth-child(3){
     background: url("../img-content/equipe4.jpg");
     background-size: cover;
 }
+@media screen and (min-width: 1192px){
+    .container {
+        max-width: 1101px;
+        width: 1152px;
+    }
 
+}
 
 @media screen and (min-width: 769px){
 
@@ -517,8 +530,16 @@ p:nth-child(3){
 /*======== JS ========*/
 
 
-
-
+.is-6 ul li a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.is-6 ul li a{
+    opacity: 0.5;
+}
+.is-6 ul li a.nav-active{
+    opacity: 1;
+}
 /*======== Calendar ========*/
 .calendar{
     position: absolute;
