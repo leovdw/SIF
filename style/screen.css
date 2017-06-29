@@ -427,7 +427,7 @@ p:nth-child(3){
     display: flex;
     padding-bottom: 0;
 }
-.nav-about .container {
+.nav-about .container_one {
     height: 90%;
     padding-top: 0;
     padding-left: 3%;
@@ -475,7 +475,7 @@ p:nth-child(3){
     color: white;
 }
 
-.nav-about .hero-body .container p{
+.nav-about .hero-body .container_one p{
     width: 100%;
     font-size: 18px;
 }
