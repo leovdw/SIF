@@ -2933,11 +2933,11 @@ input[type="submit"].button {
 }
 
 .progress.is-warning::-webkit-progress-value {
-  background-color: #ffdd57;
+  background-color: #FA0023;
 }
 
 .progress.is-warning::-moz-progress-bar {
-  background-color: #ffdd57;
+  background-color: #FA0023;
 }
 
 .progress.is-danger::-webkit-progress-value {
