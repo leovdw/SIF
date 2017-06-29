@@ -46,7 +46,6 @@ body{
     transform: translateX(-50%);
     z-index: 1;
     text-align: center;
-    height: 27vh;
 }
 
 .hero.is-fullheight .hero-body {
@@ -460,7 +459,7 @@ p:nth-child(3){
     background: transparent;
 }
 .filariane{
-    padding-bottom: 5%;
+    padding-top: 3%;
     color: white;
 }
 .filariane a{
@@ -556,8 +555,30 @@ p:nth-child(3){
         height: 100vh;
         transition: 0.5s ease;
     }
+    .hero-body .section .card p {
+        color: black;
+        font-weight: 400;
+        width: 100%;
+        font-size: 19px;
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 893px){
+    .actu .card{
+        width: 60%;
+    }
 }
 @media screen and (max-width: 627px){
+    .actu_container {
+        padding-top: 0;
+        display: -webkit-box;
+        white-space: nowrap;
+        transition: 0.8s ease;
+    }
+    .actu .card{
+        width: 80%;
+        padding: 0.5rem;
+    }
     .home .hero-body p {
         font-size: 23px;
     }
@@ -583,5 +604,11 @@ p:nth-child(3){
         width: 90%;
         height: 100vh;
         transition: 0.5s ease;
+    }
+}
+@media screen and (max-width: 450px){
+    .actu .card {
+        width: 100%;
+        padding: 0.5rem;
     }
 }
