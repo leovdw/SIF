@@ -123,7 +123,7 @@ for (var i = 0 ; i<AllButtons.length ; i++){
 
 var navHome = document.querySelector(".nav-home");
 var navProject = document.querySelector(".nav-project");
-var scrollHome = document.querySelector(".scroll-home")
+var scrollHome = document.querySelector(".scroll-home");
 
 scrollHome.addEventListener('mousewheel', function (event) {
     var scroll = Math.round(event.deltaY);
