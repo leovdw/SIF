@@ -123,7 +123,9 @@ for (var i = 0 ; i<AllButtons.length ; i++){
 
 var navHome = document.querySelector(".nav-home");
 var navProject = document.querySelector(".nav-project");
+var truc = document.querySelector(".truc");
 var scrollHome = document.querySelector(".scroll-home");
+// var navigation = document.querySelector(".scroll-home");
 
 scrollHome.addEventListener('mousewheel', function (event) {
     var scroll = Math.round(event.deltaY);
@@ -139,6 +141,34 @@ scrollHome.addEventListener('mousewheel', function (event) {
     }
 });
 
+
+// scrollHome.addEventListener('mousewheel', function (event) {
+//     var scroll = Math.round(event.deltaY);
+//     if (checkIntro > 0) {
+//         if (scroll > 1) {
+//             scrollToHome(count + 1);
+//         }
+//         if (scroll < -1) {
+//             scrollToHome(count - 1);
+//         }
+//     }
+// });
+//
+// function scrollToHome(to) {
+//     console.log("ok");
+//     count = to;
+//     var navigation = document.querySelectorAll('.navigation');
+//     if (count === navigation.length){count = navigation.length -1}
+//     if (count === -1){count = 0}
+//
+//     for (var i = 0; i < navigation.length; i++) {
+//         if (count === i){
+//             for (var j = 0; j < navigation.length; j++) {
+//                 navigation[j].style = 'opacity:1;' + 'transform: translateY(-' + i * 100 + '%);' ;
+//             }
+//         }
+//     }
+// }
 
 // ========= JS Calendrier ======= //
 
