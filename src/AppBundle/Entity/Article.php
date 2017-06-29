@@ -36,7 +36,8 @@ class Article
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="created_at", type="datetime", nullable=true)
+     * @ORM\Column(name="created_at", type="datetime", nullable = true)
+     *
      */
     private $createdAt;
     /**
@@ -52,7 +53,7 @@ class Article
      */
     private $visible;
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable = true)
      * @var string
      */
     private $image;

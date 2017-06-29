@@ -85,13 +85,11 @@ easy_admin:
                 fields:
                     - username
                     - email
-<<<<<<< HEAD
-=======
                     - password
->>>>>>> 0115462e078b8492f6a8ccbc150bf569ed2364eb
                     - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_ADMIN': 'ROLE_ADMIN' } } }
             list:
                 fields:
+                    - id
                     - username
                     - email
                     - roles
@@ -106,6 +104,7 @@ easy_admin:
                     - alt
             list:
                 fields:
+                    - id
                     - titre
                     - contenu
                     - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
@@ -123,9 +122,11 @@ easy_admin:
                     - visible
             list:
                 fields:
+                    - id
                     - titre
                     - contenu
                     - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - visible
 
             show:
                 fields:
@@ -135,20 +136,36 @@ easy_admin:
             form:
                 fields:
                     - { property: 'contenu', type: 'ckeditor' }
-                    - { property: 'imageFile', type: 'vich_image' }
-                    - alt
             list:
                 fields:
-                    - { property: 'contenu', type: 'ckeditor' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
-
-            show:
+                    - id
+                    - contenu
+        Projects:
+            class: AppBundle\Entity\Projects
+            form:
                 fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
-
+                    - annee
+                    - titre
+                    - localisation
+                    - { property: 'contenu', type: 'ckeditor' }
+            list:
+                fields:
+                    - id
+                    - titre
+                    - contenu
 vich_uploader:
     db_driver: orm
     mappings:
         product_images:
             uri_prefix:         '%app.path.product_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/article'
+
+webfactory_piwik:
+    # Required, no default. Must be set to the site id found in the Piwik control panel
+    site_id: 1
+    # Required, has default. Usually, you only want to include the tracking code in a production environment
+    disabled: %kernel.debug%
+    # Required. no default. Hostname and path to the piwik host.
+    piwik_host: my.piwik.hostname
+    # Required, has default. Path to the tracking script on the host.
+    tracker_path: "/js/"

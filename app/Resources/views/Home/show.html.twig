@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section class="hero is-fullheight actu_unique">
+
+        <div class="logo">
+            <img src="{{ asset('img-content/logo.svg') }}" alt="logo" id="logo">
+            <div class="btns is-hidden-mobile">
+                <div class=" button_media_home my-center modaluncher">Support us</div>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="columns">
+                    <div class="column">
+                        <div class="img_card" id="col_1">
+                        </div>
+                        <div class="button is-medium button_media"><a href="">SHARE</a></div>
+                    </div>
+                    <div class="column">
+                        <div class="img_card" id="col_2">
+
+                        </div>
+                        <div class="button is-medium button_media"><a href="">DONATE</a></div>
+                    </div>
+                    <div class="column">
+                        <div class="img_card" id="col_3">
+
+                        </div>
+                        <div class="button is-medium button_media"><a href="">JOIN</a></div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="modal-close"></button>
+        </div>
+
+
+        <div class="hero-body">
+
+            <section class="section">
+                <div class="filariane hero-head">
+                    <a href="{{ url('intro_index') }}">Home</a>
+                    >
+                    <a href="{{ url('index_actualites') }}">Actualitées</a>
+                    >
+                    <a href="{{ url('index_show', {'id' : article.id }) }}" class="arian_active">Fest-noz</a>
+                </div>
+
+                <div class="content">
+                    <div class="contentleft">
+                        <h1 class="title" style="font-size: 26px">{{ article.titre }}</h1>
+                        <div class="SD">
+                            <img src="{{ asset('img-content/fb.svg') }}" alt="Facebook" class="Socials"><img src="{{ asset('img-content/tw.svg') }}" alt="Twitter" class="Socials">
+                            <h2 class="subtitle">{{ article.createdAt|date('H:i d-M-Y') }}</h2>
+                            <p style="    padding-bottom: 10%;">Yalla! Pour les Enfants vous convie le samedi 29 octobre à un fest-noz de levée de fonds dont les entiers bénéfices reviendront à son école d’Aley, située au Liban, à quelques kilomètres de Beyrouth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentrigt">
+                        <img src="uploads/images/article/{{ article.image }}" />
+                    </div>
+                    <p class="pActu">
+                        {{ article.contenu|raw }}
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <p class="reserved">© 2017 YALLA! - All rights reserved</p>
+    </section>
+    {% block javascripts %}
+        <script>
+            // ========= Modal Home ======= //
+
+            var ModalLunch = document.querySelector('.modaluncher');
+            var ModalClose = document.querySelector('.modal-close');
+            var modal = document.querySelector('.modal');
+
+            ModalLunch.addEventListener('click', function () {
+                modal.classList.add('is-active')
+            });
+            ModalClose.addEventListener('click', function () {
+                modal.classList.remove('is-active')
+            });
+
+        </script>
+    {% endblock %}
+
+{% endblock %}

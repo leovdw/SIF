@@ -1,0 +1,84 @@
+<svg width="53" height="61" viewBox="0 0 53 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5120 3207)">
+<g id="Group">
+<g id="Rectangle 4">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(5120 -3201.66)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(5120 -3201.66)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Rectangle 9">
+<use xlink:href="#path2_fill" transform="translate(5120 -3201.66)" fill="#FFFFFF"/>
+</g>
+<g id="Group">
+<g id="Rectangle 10">
+<use xlink:href="#path3_fill" transform="translate(5132.11 -3207)" fill="#BDBDBD"/>
+</g>
+<g id="Rectangle 10">
+<use xlink:href="#path3_fill" transform="translate(5157.1 -3207)" fill="#BDBDBD"/>
+</g>
+</g>
+<g id="Rectangle 11">
+<use xlink:href="#path4_fill" transform="translate(5120 -3190.99)" fill="#FFFFFF"/>
+</g>
+<g id="Group">
+<g id="Group">
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5128.33 -3178.02)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5128.33 -3169.95)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5128.33 -3161.87)" fill="#FFF7F7"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5138.93 -3178.02)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5138.93 -3169.95)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5138.93 -3161.87)" fill="#FFF7F7"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5149.53 -3178.02)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5149.53 -3169.95)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5149.53 -3161.87)" fill="#FFF7F7"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5160.13 -3178.02)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5160.13 -3169.95)" fill="#FFF7F7"/>
+</g>
+<g id="Rectangle 12">
+<use xlink:href="#path5_fill" transform="translate(5160.13 -3161.87)" fill="#FFF7F7"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 5C 0 2.23858 2.23858 0 5 0L 48 0C 50.7614 0 53 2.23858 53 5L 53 50.6625C 53 53.4239 50.7614 55.6625 48 55.6625L 5 55.6625C 2.23858 55.6625 0 53.4239 0 50.6625L 0 5Z"/>
+<path id="path1_stroke_2x" d="M 5 1L 48 1L 48 -1L 5 -1L 5 1ZM 52 5L 52 50.6625L 54 50.6625L 54 5L 52 5ZM 48 54.6625L 5 54.6625L 5 56.6625L 48 56.6625L 48 54.6625ZM 1 50.6625L 1 5L -1 5L -1 50.6625L 1 50.6625ZM 5 -1C 1.68629 -1 -1 1.68629 -1 5L 1 5C 1 2.79086 2.79086 1 5 1L 5 -1ZM 48 1C 50.2091 1 52 2.79086 52 5L 54 5C 54 1.68629 51.3137 -1 48 -1L 48 1ZM 52 50.6625C 52 52.8716 50.2091 54.6625 48 54.6625L 48 56.6625C 51.3137 56.6625 54 53.9762 54 50.6625L 52 50.6625ZM 5 54.6625C 2.79086 54.6625 1 52.8716 1 50.6625L -1 50.6625C -1 53.9762 1.68629 56.6625 5 56.6625L 5 54.6625Z"/>
+<path id="path2_fill" d="M 0 5C 0 2.23858 2.23858 0 5 0L 48 0C 50.7614 0 53 2.23858 53 5L 53 8.725C 53 11.4864 50.7614 13.725 48 13.725L 5 13.725C 2.23858 13.725 0 11.4864 0 8.725L 0 5Z"/>
+<path id="path3_fill" d="M 0 1.89286C 0 0.847461 0.847461 0 1.89286 0C 2.93825 0 3.78571 0.847461 3.78571 1.89286L 3.78571 10.3071C 3.78571 11.3525 2.93825 12.2 1.89286 12.2C 0.847461 12.2 0 11.3525 0 10.3071L 0 1.89286Z"/>
+<path id="path4_fill" d="M 0 0L 53 0L 53 3.05L 0 3.05L 0 0Z"/>
+<path id="path5_fill" d="M 0 1C 0 0.447715 0.447715 0 1 0L 4.3 0C 4.85228 0 5.3 0.447715 5.3 1L 5.3 4.19324C 5.3 4.74553 4.85228 5.19324 4.3 5.19324L 1 5.19324C 0.447715 5.19324 0 4.74553 0 4.19324L 0 1Z"/>
+</defs>
+</svg>
