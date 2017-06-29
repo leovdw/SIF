@@ -153,6 +153,15 @@ easy_admin:
                     - id
                     - titre
                     - contenu
+        Content:
+            class: AppBundle\Entity\Content
+            form:
+                fields:
+                    - { property: 'content', type: 'ckeditor' }
+            list:
+                fields:
+                    - id
+                    - content
 vich_uploader:
     db_driver: orm
     mappings:

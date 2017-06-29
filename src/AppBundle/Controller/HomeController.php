@@ -35,10 +35,13 @@ class HomeController extends Controller
 
         $project = $em->getRepository('AppBundle:Projects')->findAll();
 
+        $content = $em->getRepository('AppBundle:Content')->findAll();
+
         return $this->render('Home/index.html.twig', [
             'intro' => $intro,
             'post' => $post,
             'project' => $project,
+            'content' => $content,
         ]);
     }
 

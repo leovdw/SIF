@@ -7,7 +7,7 @@
 #
 # Hôte: 127.0.0.1 (MySQL 5.6.35)
 # Base de données: symfony
-# Temps de génération: 2017-06-29 15:32:38 +0000
+# Temps de génération: 2017-06-29 17:45:50 +0000
 # ************************************************************
 
 
@@ -53,6 +53,30 @@ VALUES
 	(10,'En avril à Paris, spectacle jeune public du duo Catherine Vincent pour Yalla !','hanselgretel_web-1200x480.jpg','hanselgretel_web',NULL,'<p>Yalla&nbsp;! Pour les Enfants est heureux de vous annoncer le spectacle Hansel et Gretel du duo de musiciens Catherine Vincent, le 25 avril 2016 &agrave; 16h, &agrave; la salle G&eacute;n&eacute;riques, 34 rue de C&icirc;teaux, 75012 Paris.</p>\r\n\r\n<p>Le duo reprend en chanson le grand classique des fr&egrave;res Grimm qu&rsquo;enfants et parents reconna&icirc;tront imm&eacute;diatement&nbsp;: un fr&egrave;re et une s&oelig;ur abandonn&eacute;s dans la for&ecirc;t sont irr&eacute;sistiblement attir&eacute;s par une chaumi&egrave;re fabuleuse faite de friandises. Ils sont loin de se douter qu&rsquo;ils tomberont entre les griffes d&rsquo;une horrible sorci&egrave;re&hellip;</p>\r\n\r\n<p>Accompagn&eacute;s de leur guitare, de percussions et d&rsquo;un harmonium indien, le duo embarque petits et grands dans la magie de ce conte universel.</p>\r\n\r\n<p>Tous les b&eacute;n&eacute;fices seront revers&eacute;s &agrave; Yalla&nbsp;! Pour les Enfants<br />\r\nEn partenariat avec Souria Houria<br />\r\nA partir de 4 ans<br />\r\nTarifs&nbsp;: 15 &euro; pour les adultes, 10 &euro; pour les enfants et les adh&eacute;rents &agrave; Yalla ! Pour les Enfants</p>',1,'2017-06-29 17:14:19');
 
 /*!40000 ALTER TABLE `article` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Affichage de la table content
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `content`;
+
+CREATE TABLE `content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` longtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `content` WRITE;
+/*!40000 ALTER TABLE `content` DISABLE KEYS */;
+
+INSERT INTO `content` (`id`, `content`)
+VALUES
+	(1,'<p>Notre vision : l&rsquo;aide humanitaire de proximit&eacute;</p>\r\n\r\n<p>D&eacute;velopper la solidarit&eacute; internationale en cr&eacute;ant un pont entre les soci&eacute;t&eacute;s civiles en mesure de&nbsp;d&rsquo;aider&nbsp;et celles&nbsp;qui en ont besoin.&nbsp;<br />\r\n<br />\r\n- Gr&acirc;ce &agrave; une structure rationalis&eacute;e, au plus pr&egrave;s des donateurs et des b&eacute;n&eacute;ficiaires, Yalla&nbsp;! permet aux membres de la soci&eacute;t&eacute; civile solidaire de visualiser l&rsquo;impact de leurs dons.&nbsp;<br />\r\n- Afin de garantir l&rsquo;efficacit&eacute; et la p&eacute;rennit&eacute; de ses projets, Yalla&nbsp;! implique les b&eacute;n&eacute;ficiaires de l&rsquo;aide &agrave; toutes les &eacute;tapes du d&eacute;veloppement du projet, de l&rsquo;&eacute;laboration &agrave; l&rsquo;&eacute;valuation.</p>\r\n\r\n<p>Nos valeurs : &nbsp;les droits de l&rsquo;enfant comme valeurs souveraines</p>\r\n\r\n<p>Egalit&eacute; : Tout enfant et tout b&eacute;n&eacute;vole est consid&eacute;r&eacute; par Yalla ! de la m&ecirc;me fa&ccedil;on, quelque soit son sexe, sa nationalit&eacute; ou son appartenance ethnique ou religieuse. Yalla ! promeut l&rsquo;&eacute;galit&eacute; fille-gar&ccedil;on &agrave; travers ses activit&eacute;s et enseignements. La mixit&eacute; au sein des &eacute;quipes de b&eacute;n&eacute;voles est &eacute;galement un imp&eacute;ratif que se donne Yalla !.&nbsp;<br />\r\nTransparence : Yalla ! est responsable, vis-&agrave;-vis de ses donateurs et des b&eacute;n&eacute;ficiaires de l&rsquo;aide, de la mani&egrave;re dont elle met en &oelig;uvre sa mission et g&egrave;re ses comptes.&nbsp;</p>'),
+	(2,'<p>Notre vision : l&rsquo;aide humanitaire de proximit&eacute;</p>\r\n\r\n<p>D&eacute;velopper la solidarit&eacute; internationale en cr&eacute;ant un pont entre les soci&eacute;t&eacute;s civiles en mesure de&nbsp;d&rsquo;aider&nbsp;et celles&nbsp;qui en ont besoin.&nbsp;<br />\r\n<br />\r\n- Gr&acirc;ce &agrave; une structure rationalis&eacute;e, au plus pr&egrave;s des donateurs et des b&eacute;n&eacute;ficiaires, Yalla&nbsp;! permet aux membres de la soci&eacute;t&eacute; civile solidaire de visualiser l&rsquo;impact de leurs dons.&nbsp;<br />\r\n- Afin de garantir l&rsquo;efficacit&eacute; et la p&eacute;rennit&eacute; de ses projets, Yalla&nbsp;! implique les b&eacute;n&eacute;ficiaires de l&rsquo;aide &agrave; toutes les &eacute;tapes du d&eacute;veloppement du projet, de l&rsquo;&eacute;laboration &agrave; l&rsquo;&eacute;valuation.</p>\r\n\r\n<p>Nos valeurs : &nbsp;les droits de l&rsquo;enfant comme valeurs souveraines</p>\r\n\r\n<p>Egalit&eacute; : Tout enfant et tout b&eacute;n&eacute;vole est consid&eacute;r&eacute; par Yalla ! de la m&ecirc;me fa&ccedil;on, quelque soit son sexe, sa nationalit&eacute; ou son appartenance ethnique ou religieuse. Yalla ! promeut l&rsquo;&eacute;galit&eacute; fille-gar&ccedil;on &agrave; travers ses activit&eacute;s et enseignements. La mixit&eacute; au sein des &eacute;quipes de b&eacute;n&eacute;voles est &eacute;galement un imp&eacute;ratif que se donne Yalla !.&nbsp;<br />\r\nTransparence : Yalla ! est responsable, vis-&agrave;-vis de ses donateurs et des b&eacute;n&eacute;ficiaires de l&rsquo;aide, de la mani&egrave;re dont elle met en &oelig;uvre sa mission et g&egrave;re ses comptes.&nbsp;</p>'),
+	(3,'<p>Yalla&nbsp;! est dirig&eacute;e&nbsp;par un Bureau compos&eacute; de quatre membres, qui rendent compte des actions de Yalla&nbsp;! aux adh&eacute;rents de l&rsquo;association &agrave; travers des rapports d&rsquo;activit&eacute;s concernant chaque projet et lors des Assembl&eacute;es g&eacute;n&eacute;rales tenues une fois par an &agrave; Paris. Les b&eacute;n&eacute;voles de Yalla&nbsp;!&nbsp;&agrave; Paris et sur le terrain ont pr&eacute;alablement adopt&eacute; les valeurs de l&rsquo;association et agissent conform&eacute;ment &agrave; ses principes. Ils rapportent leurs activit&eacute;s de fa&ccedil;on r&eacute;guli&egrave;re au Bureau qui contr&ocirc;le la conformit&eacute; des actions d&eacute;velopp&eacute;es sur le terrain &agrave; la mission et aux valeurs que s&rsquo;est donn&eacute;es Yalla&nbsp;!. La tenue des comptes&nbsp;de l&rsquo;association et celles des structures cr&eacute;&eacute;es sur le terrain est assur&eacute;e par un comptable qui effectue un rapport financier &agrave; la fin de chaque projet et de chaque exercice comptable.</p>');
+
+/*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
 
 

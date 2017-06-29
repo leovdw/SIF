@@ -171,32 +171,90 @@
       <div class="hero-body scroll-home">
 
 
-      <div class="nav-home">
+         <div class="navigation nav-home navigation_isactive">
          <p><span>Yalla!</span> est un organisme indépendent, apolitique.<br> Association non confessionnelle et impartiale du droit français, créer en <strong>Juillet 2013.</strong> <br>
 
             Basé au <strong>Liban</strong>, <strong><em>Yalla!</em></strong> a comme mission principale de faire sortir les enfants déscolarisés du conflit Syrien pour qu'ils retrouvent <em>l'envie d'aller à l'école</em>
          </p>
       </div>
+         <div class="navigation nav-project" >
 
        {% for projects in project %}
 
-      <div class="nav-project">
-         <!--<div>-->
-         <h2><strong>{{ projects.annee|raw  }}</strong></h2>
-         <h3>{{ projects.titre|raw  }}</h3>
-         <figure>
-            <p><img src="img-content/pin.svg" alt="pin">{{ projects.localisation|raw  }}</p>
-         </figure>
-         <div>
-            <p class="has-text-left">
-               {{ projects.contenu|raw  }}
-            </p>
-         </div>
-         <!--</div>-->
+         <!-- Project -->
+          <h2><strong>{{ projects.annee|raw  }}</strong></h2>
+          <h3>{{ projects.titre|raw  }}</h3>
+            <figure>
+               <p><img src="{{ asset('img-content/pin.svg') }}" alt="pin">{{ projects.localisation|raw  }}</p>
+            </figure>
+            <div class="explain">
+               <p class="has-text-left">
+                   {{ projects.contenu|raw  }}
+               </p>
+            </div>
+            <div class="advancement">
+               <p class="percent">78% atteint</p>
+               <div>
+                  <div class="objectif"></div>
+                  <div class="done"></div>
+               </div>
+               <p class="totalObjectif">Objectif 28000€</p>
+            </div>
 
          {% endfor %}
       </div>
 
+         <!-- About -->
+         <div class=" nav-about">
+            <section class="hero is-medium navigation" >
+               <div class="hero-body" >
+                  <div class="container container_one about_sections is_current">
+                     {{ content['0'].content|raw  }}
+                  </div>
+
+                  <div class="container_two about_sections">
+                     <p>
+                         {{ content['2'].content|raw  }}
+                     </p>
+                     <div class="equipe_container columns">
+                        <div class="column">
+                           <div class="equipe_unique" id="equ1"></div>
+                        </div>
+                        <div class="column">
+                           <div class="equipe_unique" id="equ2"></div>
+                        </div>
+                        <div class="column">
+                           <div class="equipe_unique" id="equ3"></div>
+                        </div>
+                        <div class="column">
+                           <div class="equipe_unique" id="equ4"></div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="container_three about_sections">
+                      {{ content['1'].content|raw  }}
+                  </div>
+
+                  <div class="tab hero-foot my-center">
+                     <ul>
+                        <li class="is-beeing-seen">YALLAH ! </li>
+                        <li class="">EQUIPE</li>
+                        <li class="">STRATEGIE</li>
+                     </ul>
+                  </div>
+               </div>
+            </section>
+
+               </div>
+
+      </div>
+      <!-- Contact -->
+      <div class="navigation nav-contact" >
+         <p>yalla.enfants@gmail.com</p>
+         <p>13, rue René Villerme – 75011 PARIS</p>
+         <p>+33 (0)6.17.77.71.22</p>
+         <img src="img-content/googlemap.png" alt="google map">
       </div>
       <p class="reserved">© 2017 YALLA! - All rights reserved</p>
    </section>
