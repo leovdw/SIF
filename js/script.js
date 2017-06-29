@@ -137,10 +137,11 @@ var nav_isacctive = document.querySelector('.nav-active')
 
 for(let f=0; f<alllis ; f++){
     alllis[f].addEventListener('click', function () {
+        console.log('alllis')
         var nav_isacctive = document.querySelector('.nav-active')
         scrollToHome(f)
         nav_isacctive.classList.remove('nav-active')
-        alllis[f].classList.add('nav-active')
+        this.classList.add('nav-active')
     })
 }
 
