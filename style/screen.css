@@ -44,7 +44,6 @@ body{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
     text-align: center;
 }
 
@@ -215,12 +214,14 @@ p:nth-child(3){
     overflow: hidden;
 }
 
-.nav_active a {
-    color: rgba(255, 255, 255, 1);
+.nav-home .nav_active {
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .nav-home {
     position: absolute;
+    z-index:-5;
+    width: 100%;
 }
 
 .nav-home strong {
@@ -248,7 +249,7 @@ p:nth-child(3){
 }
 
 .home nav ul li a {
-    color: rgba(255, 255, 255, 0.65);
+    color: white;
     text-transform: uppercase;
     font-size: 24px;
 }
@@ -273,35 +274,39 @@ p:nth-child(3){
     font-size: 19px;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
 }
 
 .reserved {
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     position: absolute;
-    bottom:1%;
-    right:10%;
+    bottom:0;
+    right:0;
+    padding: 5px 10px;
 }
 
 .user {
     position: absolute;
-    top:5%;
-    right:4%;
+    top:8%;
+    right:8%;
     cursor: pointer;
 }
 
 .user img {
-    min-width: 40px;
+    width: 100%;
 }
 
 /*======== Project ========*/
 .nav-project {
     position: absolute;
     opacity: 0;
-    transform: translateY(300%);
+    transform: translateY(100vh);
     color: white;
-    /*margin: 0 auto;*/
+    z-index:-5;
+    /*cursor: url(../img-content/drag.png), auto;*/
     width: 100%;
+    margin: 20px 0 0 0;
 }
 
 .hero-body .nav-project h2 {
@@ -329,16 +334,40 @@ p:nth-child(3){
     font-size: 14px;
 }
 
-.hero-body .nav-project div {
+.hero-body .nav-project .explain {
     width: 50%;
     margin: 0 auto;
-    height: 20vh;
+    margin-top: 50px;
+    height: 19vh;
     overflow: auto;
 }
 
-.hero-body .nav-project div p {
-    font-size: 16px;
+.hero-body .nav-project .explain p {
+    font-size: 18px;
     width:80%;
+}
+
+.nav-project .advancement {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius:50px;
+    background-color: rgba(0, 0, 0, 0.76);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-project .advancement p {
+    font-size: 10px;
+}
+
+.nav-project .advancement div {
+    width: 40%;
+    height: 5px;
+    background-color: #00e7eb;
+    /*position: absolute;*/
+    /*top:50%;*/
+    /*transform: translateY(-50%);*/
 }
 
 /*======== Calendar ========*/
@@ -347,11 +376,11 @@ p:nth-child(3){
     z-index: 90;
     min-width: 55px;
     top:5%;
-    left: 4%;
+    left: 8%;
     transition: 0.8s ease;
     cursor: pointer;
 }
-.calendar img{
+.calendar img {
     cursor: pointer;
 }
 .calendrier{
@@ -607,17 +636,16 @@ p:nth-child(3) {
     }
 }
 @media screen and (max-width: 980px){
-    .home .hero-body p {
+    .home .nav-home p {
+        font-size: 20px;
+    }
+
+    .nav-home strong {
         font-size: 23px;
-        width: 70%;
     }
 
-    strong {
-        font-size: 26px;
-    }
-
-    .home span {
-        font-size: 33px;
+    .nav-home span {
+        font-size: 30px;
     }
 
     .btns a button {
@@ -627,7 +655,7 @@ p:nth-child(3) {
     }
 
     .home nav ul li a {
-        font-size: 23px;
+        font-size: 18px;
     }
 
     .calendrier{
@@ -669,23 +697,21 @@ p:nth-child(3) {
         padding: 0.5rem;
     }
     .home .hero-body p {
-        font-size: 23px;
-    }
-
-    strong {
-        font-size: 26px;
+        width: 60%;
+        margin: 0 0 0 10%;
+        font-size: 18px;
     }
 
     .home span {
-        font-size: 33px;
+        font-size: 21px;
     }
 
     .home nav {
         display: none;
     }
 
-    .home nav ul li a {
-        font-size: 23px;
+    .user {
+        display: none;
     }
 
     .calendrier{
@@ -693,6 +719,14 @@ p:nth-child(3) {
         width: 90%;
         height: 100vh;
         transition: 0.5s ease;
+    }
+
+    .calendar {
+        left: 8%;
+    }
+
+    .calendar img {
+        width: 50%;
     }
 }
 @media screen and (max-width: 450px){

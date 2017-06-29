@@ -156,16 +156,16 @@ calendar.addEventListener('click', function () {
 
 // ========= Modal Home ======= //
 
-var ModalLunch = document.querySelector('.modaluncher');
-var ModalClose = document.querySelector('.modal-close');
-var modal = document.querySelector('.modal');
-
-ModalLunch.addEventListener('click', function () {
-   modal.classList.add('is-active')
-});
-ModalClose.addEventListener('click', function () {
-   modal.classList.remove('is-active')
-});
+// var ModalLunch = document.querySelector('.modaluncher');
+// var ModalClose = document.querySelector('.modal-close');
+// var modal = document.querySelector('.modal');
+//
+// ModalLunch.addEventListener('click', function () {
+//    modal.classList.add('is-active');
+// });
+// ModalClose.addEventListener('click', function () {
+//    modal.classList.remove('is-active');
+// });
 
 
 function detectswipe(el,func) {
@@ -212,10 +212,15 @@ function detectswipe(el,func) {
 
 function myfunction(el,d) {
     if (d === "u"){
-        navHome.style = "opacity:0;" + "transform:translateY(-100%);" + "transition:0.8s ease;";
+        navHome.style = "opacity:0;" + "transform:translateY(-100vh);" + "transition:0.8s ease;";
+        navProject.style = "opacity:1;" + "transform:translateY(0%);" + "transition:0.8s ease;";
         console.log("down");
-    } else {
+    } else if (d === "d") {
+        navHome.style = "opacity:1;" + "transform:translateY(0%);" + "transition:0.8s ease;";
+        navProject.style = "opacity:0;" + "transform:translateY(100vh);" + "transition:0.8s ease;";
         console.log("not down");
+    } else {
+        return 0;
     }
     // alert("you swiped on element with id '"+el+"' to "+d+" direction");
 }
@@ -223,3 +228,4 @@ function myfunction(el,d) {
 
 
 detectswipe('.nav-home',myfunction);
+detectswipe('.nav-project',myfunction);
