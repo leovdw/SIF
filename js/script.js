@@ -124,7 +124,6 @@ for (var i = 0 ; i<AllButtons.length ; i++){
 var navHome = document.querySelector(".nav-home");
 var navProject = document.querySelector(".nav-project");
 var scrollHome = document.querySelector(".scroll-home");
-var navbar = document.querySelector(".home nav ul li a").style.color = "white;";
 
 scrollHome.addEventListener('mousewheel', function (event) {
     var scroll = Math.round(event.deltaY);

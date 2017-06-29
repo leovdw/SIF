@@ -474,7 +474,7 @@ p:nth-child(3){
 /*========== Page Actu ==========*/
 
 .actu {
-    background: url("../img-content/intro1.jpg") no-repeat;
+    background: url("../img-content/bg.jpg") no-repeat;
     background-size: cover;
     position: absolute;
     top:0;
@@ -488,7 +488,7 @@ p:nth-child(3){
     background: transparent;
 }
 .filariane{
-    padding-bottom: 5%;
+    padding-top: 3%;
     color: white;
 }
 .filariane a{
@@ -501,6 +501,7 @@ p:nth-child(3){
     text-decoration: underline;
 }
 .actu_container{
+    padding-top: 10vh;
     display: -webkit-box;
     white-space: nowrap;
     transition: 0.8s ease;
@@ -539,8 +540,101 @@ p:nth-child(3){
      text-underline: black;
  }
 
+/*========== Page ActUnique ==========*/
+
+.actu_unique .filariane{
+    padding-bottom: 1%;
+    color: white;
+}
+.actu_unique{
+    background: url("../img-content/bg.jpg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+.actu_unique .content h2:not(:first-child) {
+    margin-top: 0;
+}
+.actu_unique .content {
+    padding-top: 2%;
+    padding-left: 3%;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: auto;
+}
+.actu_unique .content .title{
+    color: white;
+
+}
+.actu_unique .section {
+    width: 100%;
+    height: calc(100vh - 20%);
+    background-color: transparent;
+    padding: 3rem 1.5rem;
+    padding-top: 5rem;
+}
+
+.SD{
+    padding-top: 2%;
+}
+
+.SD img:nth-child(2) {
+    padding-left:1%;
+    padding-right: 2%;
+}
+.SD img {
+    float: left;
+}
+
+.SD .subtitle{
+    margin-top: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.actu_unique .hero-body .section .content p{
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 1%;
+}
+
+.contentleft{
+    width: 50%;
+    float: left;
+}
+.contentrigt{
+    width: 50%;
+    float: right;
+}
+
+.pActu{
+    padding-top: 2%;
+}
+
+p:nth-child(3) {
+    padding-left: 0%;
+    cursor: hand;
+}
 /*========== Break Point ==========*/
 
+@media screen and (max-width: 1077px){
+     .actu .card{
+         width: 40%;
+     }
+    .hero-body .section .card p {
+        color: black;
+        font-weight: 400;
+        width: 100%;
+        font-size: 21px;
+        white-space: normal;
+    }
+}
 @media screen and (max-width: 980px){
     .home .nav-home p {
         font-size: 20px;
@@ -570,8 +664,38 @@ p:nth-child(3){
         height: 100vh;
         transition: 0.5s ease;
     }
+    .hero-body .section .card p {
+        color: black;
+        font-weight: 400;
+        width: 100%;
+        font-size: 19px;
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 893px){
+    .actu .card{
+        width: 60%;
+    }
 }
 @media screen and (max-width: 627px){
+    .actu_unique .content {
+        padding-top: 2%;
+        padding-left: 2%;
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+        overflow: auto;
+    }
+    .actu_container {
+        padding-top: 0;
+        display: -webkit-box;
+        white-space: nowrap;
+        transition: 0.8s ease;
+    }
+    .actu .card{
+        width: 80%;
+        padding: 0.5rem;
+    }
     .home .hero-body p {
         width: 60%;
         margin: 0 0 0 10%;
@@ -603,5 +727,11 @@ p:nth-child(3){
 
     .calendar img {
         width: 50%;
+    }
+}
+@media screen and (max-width: 450px){
+    .actu .card {
+        width: 100%;
+        padding: 0.5rem;
     }
 }
