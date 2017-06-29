@@ -264,10 +264,19 @@ detectswipe('.nav-project',myfunction);
 
 var lis = document.querySelectorAll('.tab.hero-foot ul li');
 var lisSeen = document.querySelector('.is-beeing-seen');
+var allsections = document.querySelectorAll('.about_sections')
+var section_seen = document.querySelector('.is_current')
 
-for (var o=0 ; o<lis.length ; o++){
-    lis[o].addEventListener('click', function () {
+for (let k=0 ; k<lis.length ; k++){
+    lis[k].addEventListener('click', function () {
+        var lisSeen = document.querySelector('.is-beeing-seen');
+        var section_seen = document.querySelector('.is_current')
 
+        lis[k].classList.add('is-beeing-seen')
+        lisSeen.classList.remove('is-beeing-seen')
+
+        allsections[k].classList.add('is_current')
+        section_seen.classList.remove('is_current')
     })
 }
 
