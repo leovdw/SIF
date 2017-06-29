@@ -228,3 +228,16 @@ function myfunction(el,d) {
 
 detectswipe('.nav-home',myfunction);
 detectswipe('.nav-project',myfunction);
+
+
+
+
+var lis = document.querySelectorAll('.tab.hero-foot ul li');
+var lisSeen = document.querySelector('.is-beeing-seen');
+
+for (var o=0 ; o<lis.length ; o++){
+    lis[o].addEventListener('click', function () {
+
+    })
+}
+
