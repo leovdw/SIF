@@ -513,6 +513,10 @@ p:nth-child(3){
 
 /*========== Page ActUnique ==========*/
 
+.actu_unique .filariane{
+    padding-bottom: 1%;
+    color: white;
+}
 .actu_unique{
     background: url("../img-content/bg.jpg") no-repeat;
     background-size: cover;
@@ -522,20 +526,72 @@ p:nth-child(3){
     width: 100%;
 }
 
+.actu_unique .content h2:not(:first-child) {
+    margin-top: 0;
+}
 .actu_unique .content {
     padding-top: 2%;
+    padding-left: 3%;
     width: 95%;
     margin: 0 auto;
     height: 100%;
     overflow: auto;
 }
+.actu_unique .content .title{
+    color: white;
+
+}
 .actu_unique .section {
+    width: 100%;
     height: calc(100vh - 20%);
     background-color: transparent;
     padding: 3rem 1.5rem;
     padding-top: 5rem;
 }
 
+.SD{
+    padding-top: 2%;
+}
+
+.SD img:nth-child(2) {
+    padding-left:1%;
+    padding-right: 2%;
+}
+.SD img {
+    float: left;
+}
+
+.SD .subtitle{
+    margin-top: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.actu_unique .hero-body .section .content p{
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 1%;
+}
+
+.contentleft{
+    width: 50%;
+    float: left;
+}
+.contentrigt{
+    width: 50%;
+    float: right;
+}
+
+.pActu{
+    padding-top: 2%;
+}
+
+p:nth-child(3) {
+    padding-left: 0%;
+    cursor: hand;
+}
 /*========== Break Point ==========*/
 
 @media screen and (max-width: 1077px){
@@ -594,6 +650,14 @@ p:nth-child(3){
     }
 }
 @media screen and (max-width: 627px){
+    .actu_unique .content {
+        padding-top: 2%;
+        padding-left: 2%;
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+        overflow: auto;
+    }
     .actu_container {
         padding-top: 0;
         display: -webkit-box;
